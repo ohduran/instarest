@@ -67,3 +67,7 @@ services:
     ports:
       - "5555:5555"
     command: /start-flower
+
+  selenium:
+    image: selenium/standalone-chrome
+    shm_size: 128M
