@@ -22,26 +22,6 @@ coreapi==2.3.3  # https://github.com/core-api/python-client
 
 # InstaPY
 # ------------------------------------------------------------------------------
-wheel==0.32.3
-certifi>=2018.10.15
-chardet>=3.0.4
-clarifai>=2.4.1
-configparser>=3.5.0
-EasyProcess>=0.2.3
-emoji>=0.5.1
-future>=0.17.1
-grpcio==1.18.0
-idna>=2.7
-jsonschema>=2.6.0
-plyer>=1.3.1
-protobuf>=3.6.1
-PyVirtualDisplay>=0.2.1
-requests>=2.20.1
-selenium>=3.141.0
-six>=1.11.0
-urllib3>=1.24.1
-regex>=2018.11.22
-MeaningCloud-python>=1.1.1
-PyYAML>=3.13
-instapy-chromedriver==2.44
-instapy==0.1.3
+MeaningCloud-python==1.1.1  # https://github.com/MeaningCloud/meaningcloud-python
+regex==2019.02.20  # https://bitbucket.org/mrabarnett/mrab-regex
+instapy==0.2.0 # https://github.com/timgrossmann/InstaPy
