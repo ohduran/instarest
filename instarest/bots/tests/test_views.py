@@ -12,7 +12,7 @@ class TestBotViewSet:
         data = {'username': 'test', 'password': 'testpassword'}
         response = tp.post('bot-list', data=data, extra={'format': 'json'})
 
-        expected_json = {'id': 1, 'slug': 'test', 'username': 'test', 'verified': False}
+        expected_json = {'id': 1, 'slug': 'test', 'username': 'test', 'is_verified': False}
         assert expected_json == response.json()
         assert status.HTTP_201_CREATED == response.status_code
 
