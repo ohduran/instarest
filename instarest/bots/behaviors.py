@@ -24,7 +24,7 @@ class Timestampable(models.Model):
 
 
 class Verifiable(models.Model):
-    verified = models.BooleanField(default=False)
+    is_verified = models.BooleanField(default=False)
 
     class Meta:
         abstract = True
