@@ -23,3 +23,6 @@ class Bot(Timestampable, Verifiable, Permalinkable, models.Model):
     password = models.CharField(max_length=50)
 
     objects = BotManager()
+
+    def save(self, *args, **kwargs):
+        return super().save(*args, **kwargs)
