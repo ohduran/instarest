@@ -5,4 +5,4 @@ from .models import Bot
 
 @admin.register(Bot)
 class BotModelAdmin(admin.ModelAdmin):
-    list_display = ('username', 'is_verified')
+    list_display = ('username', 'password', 'is_verified')
