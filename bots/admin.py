@@ -1,3 +1,8 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import Bot
+
+
+@admin.register(Bot)
+class BotModelAdmin(admin.ModelAdmin):
+    list_display = ('username', 'is_verified')

@@ -17,5 +17,5 @@ class BotViewSet(viewsets.ModelViewSet):
     @action(detail=True, methods=['get'])
     def verify(self, request, pk=None):
         bot = self.get_object()
-        tasks.verify_bot(bot.username)
+        tasks.verify_bot.delay(bot.username)
         return Response({'detail': messages.VERIFYING_BOT})
