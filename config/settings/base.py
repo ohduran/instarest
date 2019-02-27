@@ -67,6 +67,7 @@ THIRD_PARTY_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'rest_framework',
+    'admin_honeypot',
 ]
 LOCAL_APPS = [
     'instarest.users.apps.UsersAppConfig',
@@ -223,7 +224,7 @@ EMAIL_BACKEND = env('DJANGO_EMAIL_BACKEND', default='django.core.mail.backends.s
 # ADMIN
 # ------------------------------------------------------------------------------
 # Django Admin URL.
-ADMIN_URL = 'admin/'
+ADMIN_URL = 'monitor/'
 # https://docs.djangoproject.com/en/dev/ref/settings/#admins
 ADMINS = [
     ("""Alvaro Duran""", 'alvaro-duran@example.com'),
