@@ -23,4 +23,3 @@ django-filter==2.1.0   # https://github.com/carltongibson/django-filter
 # InstaPy
 instapy==0.2.2  # https://github.com/timgrossmann/InstaPy
 grpcio==1.18.0  # https://grpc.io/
-jsonschema==2.6.0  # https://github.com/Julian/jsonschema
