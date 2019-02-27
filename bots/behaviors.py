@@ -1,3 +1,4 @@
+from django.contrib.auth.hashers import make_password
 from django.db import models
 from django.utils.text import slugify
 
@@ -29,3 +30,14 @@ class Verifiable(models.Model):
 
     class Meta:
         abstract = True
+
+
+class PasswordEncryptable(models.Model):
+    password = models.CharField(max_length=50)
+
+    class Meta:
+        abstract = True
+
+    def clean(self):
+        self.password = make_password(self.password)
+        return super().clean()

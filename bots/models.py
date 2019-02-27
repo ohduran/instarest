@@ -1,6 +1,6 @@
 from django.db import models
 
-from .behaviors import Permalinkable, Timestampable, Verifiable
+from .behaviors import PasswordEncryptable, Permalinkable, Timestampable, Verifiable
 
 
 class BotQueryset(models.QuerySet):
@@ -18,14 +18,10 @@ class BotManager(models.Manager):
         return self.filter(is_verified=True, **kwargs)
 
 
-class Bot(Timestampable, Verifiable, Permalinkable, models.Model):
+class Bot(Timestampable, Verifiable, PasswordEncryptable, Permalinkable, models.Model):
     username = models.CharField(max_length=50, unique=True)
-    password = models.CharField(max_length=50)
 
     objects = BotManager()
-
-    def save(self, *args, **kwargs):
-        return super().save(*args, **kwargs)
 
     def __str__(self):
         return '@{}'.format(self.username)
