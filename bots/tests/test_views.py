@@ -1,8 +1,7 @@
 from unittest.mock import patch
 
-from django.test.utils import override_settings
-
 import pytest
+from django.test.utils import override_settings
 from model_mommy import mommy
 from rest_framework import status
 
@@ -27,7 +26,7 @@ class TestBotViewSet:
 
         assert 'test' == bot.slug
 
-    @override_settings(CELERY_ALWAYS_EAGER=True)
+    @override_settings(task_always_eager=True)
     def test_Verify_GivenCorrectUsernameAndPassword_isVerifiedTurnsTrue(self, tp):
 
         bot = mommy.make(Bot, username='username', password='password', pk=1)
