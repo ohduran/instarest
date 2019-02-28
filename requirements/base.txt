@@ -22,5 +22,7 @@ django-rest-knox==3.6.0  # https://github.com/James1345/django-rest-knox
 django-filter==2.1.0   # https://github.com/carltongibson/django-filter
 
 # InstaPy
-git+https://github.com/timgrossmann/InstaPy.git  # https://github.com/timgrossmann/InstaPy
+# TODO: Return to release when released
+git+https://github.com/timgrossmann/InstaPy.git@dev # https://github.com/timgrossmann/InstaPy
 grpcio==1.18.0  # https://grpc.io/
+jsonschema==2.6.0
