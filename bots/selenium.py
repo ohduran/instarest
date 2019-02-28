@@ -7,5 +7,6 @@ def get_session(bot):
                       selenium_local_session=False)
     session.set_selenium_remote_session(selenium_url='http://selenium:4444/wd/hub')
     session.login()
+    session.end(threaded_session=True)
     # session.aborting turns True iff login failed.
     return not session.aborting
