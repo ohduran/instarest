@@ -1,4 +1,4 @@
-from common.behaviors import Permalinkable, Timestampable
+from common.behaviors import Completable, Permalinkable, Timestampable
 from django.db import models
 
 
@@ -14,7 +14,7 @@ class FollowManager(models.Manager):
         return self.filter(is_complete=True, **kwargs)
 
 
-class Follow(Timestampable, Permalinkable, models.Model):
+class Follow(Completable, Timestampable, Permalinkable, models.Model):
     username = models.CharField(max_length=50, unique=True)
     bot = models.ForeignKey('bots.Bot', on_delete=models.CASCADE)
 

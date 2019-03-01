@@ -3,6 +3,14 @@ from django.utils.text import slugify
 
 
 # Keep alphabetical order
+class Completable(models.Model):
+    is_complete = models.BooleanField(default=False)
+    last_complete = models.DateTimeField(null=True, blank=True)
+
+    class Meta:
+        abstract = True
+
+
 class Permalinkable(models.Model):
     slug = models.SlugField(unique=True)
 
