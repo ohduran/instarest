@@ -1,6 +1,7 @@
 from unittest.mock import patch
 
 import pytest
+from common.tests import TimestampableTests
 from django.test.utils import override_settings
 from model_mommy import mommy
 from rest_framework import status
@@ -10,7 +11,11 @@ from ..models import Bot
 
 
 @pytest.mark.django_db
-class TestBotViewSet:
+class TestBotViewSet(TimestampableTests):
+    model = Bot
+
+    def create_instance(self, **kwargs):
+        return Bot.objects.create(**kwargs)
 
     def test_Post_GivenUsernameAndPassword_SlugIsUsername(self, tp):
         data = {'username': 'test', 'password': 'testpassword'}
