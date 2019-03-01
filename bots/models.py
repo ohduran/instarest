@@ -1,6 +1,7 @@
+from common.behaviors import Permalinkable, Timestampable
 from django.db import models
 
-from .behaviors import PasswordEncryptable, Permalinkable, Timestampable, Verifiable
+from .behaviors import PasswordEncryptable, Verifiable
 
 
 class BotQueryset(models.QuerySet):
