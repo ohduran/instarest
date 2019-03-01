@@ -15,7 +15,7 @@ RUN apk update \
   # https://docs.djangoproject.com/en/dev/ref/django-admin/#dbshell
   && apk add postgresql-client \
   # InstaPY dependencies
-  && apk add chromium chromium-chromedriver wget gcc g++ \
+  && apk add chromium chromium-chromedriver wget g++ \
   # git
   && apk add git
 
