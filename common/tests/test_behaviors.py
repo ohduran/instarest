@@ -1,3 +1,7 @@
+from django.utils import timezone
+from freezegun import freeze_time
+
+
 class BehaviorTestMixin:
 
     def get_model(self):
@@ -10,7 +14,9 @@ class BehaviorTestMixin:
 class TimestampableTests(BehaviorTestMixin):
 
     def test_timestampable_object(self):
-        from django.utils import timezone
-        obj = self.create_instance(created_date=timezone.now())
 
-        assert obj
+        now = timezone.now()
+        with freeze_time(now):
+            obj = self.create_instance()
+
+        assert now == obj.created_date
