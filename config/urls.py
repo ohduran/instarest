@@ -4,6 +4,7 @@ from django.contrib import admin
 from django.urls import include, path
 from django.views import defaults as default_views
 from django.views.generic import TemplateView
+from rest_framework.documentation import include_docs_urls
 from rest_framework.schemas import get_schema_view
 
 urlpatterns = [
@@ -23,6 +24,7 @@ urlpatterns = [
     ),
     path("accounts/", include("allauth.urls")),
     path('schema/', get_schema_view()),
+    path('docs/', include_docs_urls()),
     # Your stuff: custom urls includes go here
     path("bots/", include("bots.urls")),
 ] + static(

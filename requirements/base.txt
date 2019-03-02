@@ -22,6 +22,8 @@ djangorestframework==3.9.1  # https://github.com/encode/django-rest-framework
 coreapi==2.3.3  # https://github.com/core-api/python-client
 django-rest-knox==3.6.0  # https://github.com/James1345/django-rest-knox
 django-filter==2.1.0   # https://github.com/carltongibson/django-filter
+Pygments==2.3.1  # http://pygments.org/
+Markdown==3.0.1  # https://python-markdown.github.io/
 
 # InstaPy
 # TODO: Return to release when released
