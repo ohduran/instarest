@@ -4,6 +4,7 @@ from django.contrib import admin
 from django.urls import include, path
 from django.views import defaults as default_views
 from django.views.generic import TemplateView
+from rest_framework.schemas import get_schema_view
 
 urlpatterns = [
     path("", TemplateView.as_view(template_name="pages/home.html"), name="home"),
@@ -21,6 +22,7 @@ urlpatterns = [
         include("instarest.users.urls", namespace="users"),
     ),
     path("accounts/", include("allauth.urls")),
+    path('schema/', get_schema_view()),
     # Your stuff: custom urls includes go here
     path("bots/", include("bots.urls")),
 ] + static(
