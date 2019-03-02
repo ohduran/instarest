@@ -1,5 +1,10 @@
 [run]
-include = instarest/*
-omit = *migrations*, *tests*
-plugins =
-    django_coverage_plugin
+branch = True
+omit = *migrations*,
+       *urls*,
+       *test*,
+       *admin*,
+       ./manage.py,
+       ./InstaREST/config/*,
+       ./InstaREST/wsgi.py,
+       *__init__*
