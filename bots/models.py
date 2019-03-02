@@ -1,6 +1,8 @@
 from common.behaviors import Permalinkable, Timestampable
 from django.db import models
 
+from instarest.users.mixins import HasUserMixin
+
 from .behaviors import PasswordEncryptable, Verifiable
 
 
@@ -19,7 +21,7 @@ class BotManager(models.Manager):
         return self.filter(is_verified=True, **kwargs)
 
 
-class Bot(Timestampable, Verifiable, PasswordEncryptable, Permalinkable, models.Model):
+class Bot(Timestampable, Verifiable, PasswordEncryptable, Permalinkable, HasUserMixin, models.Model):
     username = models.CharField(max_length=50, unique=True)
 
     objects = BotManager()
