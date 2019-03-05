@@ -1,0 +1,7 @@
+# PostgreSQL
+# ------------------------------------------------------------------------------
+POSTGRES_HOST=postgres
+POSTGRES_PORT=5432
+POSTGRES_DB=instarest
+POSTGRES_USER=RfcYGmVQSGmlnYtgxgWRjEScrJiCTFXy
+POSTGRES_PASSWORD=of8Mr72o7MNMjpOm5aN5JzA4MUv0e2MzpqeLqRnRTT7L9nlij2CPRiLMCjVCGhVp
