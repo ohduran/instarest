@@ -277,3 +277,4 @@ test_cookiecutter_django/media/
 .env
 .envs/*
 !.envs/.local/
+*/.envs/*
