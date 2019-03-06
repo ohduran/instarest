@@ -71,6 +71,8 @@ THIRD_PARTY_APPS = [
 LOCAL_APPS = [
     'users.apps.UsersAppConfig',
     # Your stuff: custom apps go here
+    'bots',
+    'common',
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
