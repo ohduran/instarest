@@ -6,19 +6,6 @@ from rest_framework.authtoken.models import Token
 User = get_user_model()
 
 
-@pytest.fixture
-def default_user():
-    data = {
-        'username': 'john',
-        'password': 'secret',
-        'email': 'john@beatles.com',
-    }
-    user = User.objects.create_user(**data)
-    user.raw_password = data['password']
-    Token.objects.create(user=user)
-    return user
-
-
 @pytest.mark.django_db
 class TestTokenCreateView:
 
@@ -49,7 +36,6 @@ class TestUserViewSet:
         response = client.get(reverse('users:user-list'), HTTP_AUTHORIZATION=headers)
 
         expected_response = [{
-            'url': 'http://testserver/auth/users/2/',
             'username': default_user.username,
             'email': default_user.email,
             'is_staff': False
