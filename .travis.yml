@@ -7,7 +7,10 @@ before_install:
   - sudo apt-get install -qq firefox automake libtool libreadline6 libreadline6-dev libreadline-dev
   - sudo apt-get install -qq libsqlite3-dev libxml2 libxml2-dev libssl-dev libbz2-dev wget curl llvm
 language: python
+
 python:
   - "3.6"
+install:
+  - pip install -r instarest/requirements/local.txt
 script:
   - pytest
