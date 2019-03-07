@@ -16,4 +16,4 @@ env_file:
   - DJANGO_VERSION=2.1.7
 
 script:
-  - pytest
+  - pytest instarest/
