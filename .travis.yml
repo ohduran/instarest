@@ -10,10 +10,11 @@ language: python
 
 python:
   - "3.6"
+services:
+  - docker
+
 install:
   - pip install -r instarest/requirements/local.txt
-env_file:
-  - DJANGO_VERSION=2.1.7
 
 script:
-  - cd instarest/ && pytest
+  - docker-compose run --rm django pytest
