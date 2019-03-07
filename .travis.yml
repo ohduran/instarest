@@ -12,5 +12,9 @@ python:
   - "3.6"
 install:
   - pip install -r instarest/requirements/local.txt
+env_file:
+  - ./.envs/.local/.django
+  - ./.envs/.local/.postgres
+
 script:
   - pytest
