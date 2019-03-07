@@ -17,4 +17,4 @@ install:
   - pip install -r instarest/requirements/local.txt
 
 script:
-  - docker-compose run --rm django pytest
+  - cd instarest/ && docker-compose run --rm django pytest
