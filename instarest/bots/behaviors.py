@@ -1,6 +1,5 @@
 from django.contrib.auth.hashers import make_password
 from django.db import models
-from django.utils.text import slugify
 
 
 # Keep alphabetical order

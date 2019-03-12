@@ -13,6 +13,8 @@ urlpatterns = [
     path(
         'auth/',
         include('djoser.urls')),
+    path('follows/', include('follows.urls', namespace='follows')),
     path('auth/', include('djoser.urls.authtoken')),
     path('bots/', include('bots.urls', namespace='bots')),
+
 ]
