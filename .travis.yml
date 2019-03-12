@@ -8,3 +8,6 @@ services:
 
 script:
   - cd instarest/ && docker-compose run --rm django pytest
+
+after_success:
+  - codecov

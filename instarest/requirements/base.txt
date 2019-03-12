@@ -25,5 +25,5 @@ Pygments==2.3.1  # http://pygments.org/
 Markdown==3.0.1  # https://python-markdown.github.io/
 
 # InstaPy
-# TODO: Return to release when released
-git+https://github.com/timgrossmann/InstaPy.git@dev # https://github.com/timgrossmann/InstaPy
+# git+https://github.com/timgrossmann/InstaPy.git@dev
+instapy==0.3.2  # https://github.com/timgrossmann/InstaPy
