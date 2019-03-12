@@ -1,3 +1,12 @@
-from django.shortcuts import render
+from rest_framework import viewsets
 
-# Create your views here.
+from .models import Followed
+from .serializers import FollowedSerializer
+
+
+class FollowedViewSet(viewsets.ModelViewSet):
+    """
+    A simple ViewSet for viewing and editing bots.
+    """
+    queryset = Followed.objects.all()
+    serializer_class = FollowedSerializer
