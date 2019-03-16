@@ -255,7 +255,3 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.TokenAuthentication',
     ),
 }
-
-
-import django_heroku  # isort:skip
-django_heroku.settings(locals())

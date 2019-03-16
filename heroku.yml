@@ -18,3 +18,7 @@ setup:
 build:
   docker:
     django: compose/local/django/Dockerfile
+    celery: compose/local/django/Dockerfile
+run:
+  django: sh -c 'gunicorn instarest.config.wsgi:application'
+  celery: sh -c 'celery worker --app=instarest.instarest.taskapp --loglevel=info'
