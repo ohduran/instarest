@@ -1,2 +1,2 @@
-web: sh -c 'gunicorn config.wsgi:application'
-worker: sh -c 'celery worker --app=instarest.taskapp --loglevel=info'
+web: sh -c 'gunicorn instarest.config.wsgi:application'
+worker: sh -c 'celery worker --app=instarest.instarest.taskapp --loglevel=info'
