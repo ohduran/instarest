@@ -1,0 +1,19 @@
+setup:
+  addons:
+    - heroku-postgresql:hobby-dev
+    - heroku-redis:hobby-dev
+    - sentry:f1
+  config:
+    - PYTHONHASHSEED: random
+    - WEB_CONCURRENCY: 4
+    - DJANGO_DEBUG: False
+    - DJANGO_SETTINGS_MODULE: config.settings.local
+    - DJANGO_SECRET_KEY: $(openssl rand -base64 64)
+    - DJANGO_ADMIN_URL: $(openssl rand -base64 4096 | tr -dc 'A-HJ-NP-Za-km-z2-9' | head -c 32)/
+    - DJANGO_ALLOWED_HOSTS:
+    - DJANGO_AWS_ACCESS_KEY_ID:
+    - DJANGO_AWS_SECRET_ACCESS_KEY:
+    - DJANGO_AWS_STORAGE_BUCKET_NAME:
+build:
+  docker:
+    django: compose/local/django/Dockerfile
