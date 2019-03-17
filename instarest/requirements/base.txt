@@ -12,7 +12,7 @@ django-environ==0.4.5  # https://github.com/joke2k/django-environ
 django-model-utils==3.1.2  # https://github.com/jazzband/django-model-utils
 django-admin-honeypot==1.1.0  # https://github.com/dmpayton/django-admin-honeypot
 django-redis==4.10.0  # https://github.com/niwinz/django-redis
-django-heroku==0.3.1  # https://github.com/heroku/django-heroku
+# django-heroku==0.3.1  # https://github.com/heroku/django-heroku
 djoser==1.4.0  # https://github.com/sunscrapers/djoser
 
 # Django REST Framework
