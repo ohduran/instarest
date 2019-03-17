@@ -9,9 +9,8 @@ services:
 
 script:
   - cd instarest/
-  - mkdir shared
-  - docker-compose run -v "$PWD/shared:/shared" django pytest --cov=./
-  - cat shared/coverage.txt
+  - ci_env=`bash <(curl -s https://codecov.io/env)`
+  - docker-compose run $ci_env  django pytest --cov=./ && bash <(curl -s https://codecov.io/bash)
   - bash <(curl -s https://codecov.io/bash)
 
 after_success:
