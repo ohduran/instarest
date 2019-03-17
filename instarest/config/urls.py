@@ -5,7 +5,7 @@ from rest_framework.documentation import include_docs_urls
 
 urlpatterns = [
     path(settings.ADMIN_URL, admin.site.urls),
-    path('docs/', include_docs_urls(title='InstaREST')),
+    path('', include_docs_urls(title='InstaREST', authentication_classes=[], permission_classes=[])),
     path(
         "users/",
         include("users.urls", namespace="users"),

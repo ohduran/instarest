@@ -5,16 +5,14 @@ argon2-cffi==19.1.0  # https://github.com/hynek/argon2_cffi
 redis==3.2.0  # https://github.com/antirez/redis
 celery==4.2.1  # https://github.com/celery/celery
 flower==0.9.2  # https://github.com/mher/flower
-tornado==5.1.1 # https://github.com/tornadoweb/tornado
-grpcio==1.18.0  # https://grpc.io/
-jsonschema==2.6.0  # https://github.com/Julian/jsonschema
 
 # Django
-django==2.1.7  # https://www.djangoproject.com/
+Django==2.1.7  # https://www.djangoproject.com/
 django-environ==0.4.5  # https://github.com/joke2k/django-environ
 django-model-utils==3.1.2  # https://github.com/jazzband/django-model-utils
 django-admin-honeypot==1.1.0  # https://github.com/dmpayton/django-admin-honeypot
 django-redis==4.10.0  # https://github.com/niwinz/django-redis
+# django-heroku==0.3.1  # https://github.com/heroku/django-heroku
 djoser==1.4.0  # https://github.com/sunscrapers/djoser
 
 # Django REST Framework
@@ -25,5 +23,4 @@ Pygments==2.3.1  # http://pygments.org/
 Markdown==3.0.1  # https://python-markdown.github.io/
 
 # InstaPy
-# TODO: Return to release when released
-git+https://github.com/timgrossmann/InstaPy.git@dev # https://github.com/timgrossmann/InstaPy
+instapy==0.3.2  # https://github.com/timgrossmann/InstaPy

@@ -1,6 +1,7 @@
 from unittest.mock import patch
 
 import pytest
+from bots.models import Bot
 from common.tests import TimestampableTests
 from django.test.utils import override_settings
 from django.urls import reverse
@@ -8,7 +9,6 @@ from model_mommy import mommy
 from rest_framework import status
 
 from .. import messages
-from ..models import Bot
 
 
 @pytest.mark.django_db
