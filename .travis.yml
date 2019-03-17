@@ -10,9 +10,6 @@ services:
 script:
   - cd instarest/
   - mkdir shared
+  - docker-compose build
   - docker-compose run -v "$PWD/shared:/shared" django pytest --cov=./
-  - cat shared/coverage.txt
   - bash <(curl -s https://codecov.io/bash)
-
-after_success:
-- codecov
