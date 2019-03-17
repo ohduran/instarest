@@ -4,4 +4,7 @@ services:
   - docker
 
 script:
-  - cd instarest/ && docker-compose run --rm django pytest --cov=./
+  - cd instarest/
+  - mkdir shared
+  - docker-compose run -v "$PWD/shared:/shared" django pytest --cov=./ && mv coverage.txt shared
+  - bash <(curl -s https://codecov.io/bash)
