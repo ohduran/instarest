@@ -1,4 +1,6 @@
-sudo: true
+sudo: false
+
+language: python
 
 services:
   - docker
