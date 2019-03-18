@@ -27,5 +27,5 @@ script:
   - cd instarest/
   - mkdir shared
   - docker-compose build
-  - docker-compose run -v "$PWD/shared:/shared"
+  - docker-compose run -itv "$PWD/shared:/shared" django pytest --cov=./
   - curl -s https://codecov.io/bash | bash -
