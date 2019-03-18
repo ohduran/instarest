@@ -7,11 +7,11 @@ python:
 services:
   - docker
 
-env:
-  - MICRO_SERVICE=guessing/game
 
 before_install:
-  - cd $MICRO_SERVICE && docker build -t $MICRO_SERVICE ./
+  - cd instarest/
+  - mkdir shared
+  - docker-compose build
 
 script:
-  - mkdir shared & docker run -itv "$PWD/shared:/shared" --entrypoint "make" $MICRO_SERVICE travis && curl -s https://codecov.io/bash | bash -
+  - mkdir shared & docker-compose run -itv "$PWD/shared:/shared"  && curl -s https://codecov.io/bash | bash -
