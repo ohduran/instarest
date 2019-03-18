@@ -27,5 +27,5 @@ script:
   - cd instarest/
   - mkdir shared
   - docker-compose build
-  - docker-compose run -itv "$PWD/shared:/shared"
+  - docker-compose run -v "$PWD/shared:/shared"
   - curl -s https://codecov.io/bash | bash -
