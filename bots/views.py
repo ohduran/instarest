@@ -1,4 +1,4 @@
-from rest_framework import viewsets
+from rest_framework import status, viewsets
 from rest_framework.decorators import action
 from rest_framework.response import Response
 
@@ -19,3 +19,8 @@ class BotViewSet(viewsets.ModelViewSet):
         bot = self.get_object()
         tasks.verify_bot.delay(bot.username)
         return Response({'detail': messages.VERIFYING_BOT})
+
+    @action(detail=True, methods=['post'])
+    def follow(self, request, pk):
+        bot = self.get_object()
+        return Response({'detail': messages.FOLLOWING_ACCOUNTS}, status=status.HTTP_201_CREATED)
