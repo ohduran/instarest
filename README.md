@@ -85,3 +85,7 @@ I am convince that the value added by any business has little to do with the cod
 Usually the one open sourcing the technology is the expert in the area, so any company running away with someone else's code to build a better business may still be at a disadvantage.
 
 I also believe that open sourcing creates value by contributing to the team's culture and your ability to hire good people. There is more social value and technical reputation in giving away your best stuff than keeping it proprietary.
+
+# License
+
+View [License](LICENSE)
