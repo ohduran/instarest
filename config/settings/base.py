@@ -72,7 +72,6 @@ LOCAL_APPS = [
     'users.apps.UsersAppConfig',
     # Your stuff: custom apps go here
     'bots',
-    'follows',
     'common',
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
