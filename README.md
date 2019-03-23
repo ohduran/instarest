@@ -63,6 +63,8 @@ I can do with some help bringing this project forward! You can help out in very 
 * Look for [issues labelled Good first issue](https://github.com/ohduran/Promenade/labels/good%20first%20issue) for issues that are for people who want to contribute, but try to work on a small feature first.
 * If you are an advanced developer, you can try to tackle [issues labelled enhancement](https://github.com/ohduran/Promenade/labels/enhancement). Beware though - they are harder to do and will require a lot of back and forth with the repository administrator in order to make sure we are going to the right direction with the product.
 
+You can trace the evolution of these and other things in the [Trello board](https://trello.com/b/3WOUAfDT/promenade)
+
 # Principles
 
 * Software is __information__, and information must be free.
