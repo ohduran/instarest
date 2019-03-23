@@ -1,1 +1,1 @@
-from .test_behaviors import *
+from .behavior_tests import *

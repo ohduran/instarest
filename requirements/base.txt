@@ -5,6 +5,7 @@ argon2-cffi==19.1.0  # https://github.com/hynek/argon2_cffi
 redis==3.2.0  # https://github.com/antirez/redis
 celery==4.2.1  # https://github.com/celery/celery
 flower==0.9.2  # https://github.com/mher/flower
+tornado==5.1.1  # https://github.com/tornadoweb/tornado
 
 # Django
 Django==2.1.7  # https://www.djangoproject.com/
@@ -23,4 +24,4 @@ Pygments==2.3.1  # http://pygments.org/
 Markdown==3.0.1  # https://python-markdown.github.io/
 
 # InstaPy
-instapy==0.3.2  # https://github.com/timgrossmann/InstaPy
+instapy==0.3.4  # https://github.com/timgrossmann/InstaPy

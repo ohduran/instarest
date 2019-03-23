@@ -2,7 +2,7 @@ from django.utils import timezone
 from freezegun import freeze_time
 
 
-class BehaviorTestMixin:
+class BehaviorTestCaseMixin:
 
     def get_model(self):
         return getattr(self, 'model')
@@ -11,7 +11,7 @@ class BehaviorTestMixin:
         raise NotImplementedError('Implement method')
 
 
-class TimestampableTests(BehaviorTestMixin):
+class TimestampableTests(BehaviorTestCaseMixin):
 
     def test_created_date(self):
 
@@ -30,3 +30,10 @@ class TimestampableTests(BehaviorTestMixin):
             obj.save()
 
         assert now == obj.modified_date
+
+
+class PermalinkableTests(BehaviorTestCaseMixin):
+
+    def test_givenAnObjectWithUsername_theSlugIsTheSlugifiedUsername(self, default_user, client):
+        obj = self.create_instance(username='test')
+        assert 'test' == obj.slug

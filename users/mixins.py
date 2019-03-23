@@ -1,3 +1,4 @@
+from django.conf import settings
 from django.core.exceptions import ValidationError
 from django.db import models
 
@@ -6,7 +7,8 @@ from .models import User
 
 # Keep alphabetical order
 class HasUserMixin(models.Model):
-    user = models.ForeignKey('users.User', null=True, on_delete=models.SET_NULL)
+
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, null=True, on_delete=models.SET_NULL)
 
     class Meta:
         abstract = True
