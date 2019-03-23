@@ -15,5 +15,5 @@ urlpatterns = [
         include('djoser.urls')),
     path('auth/', include('djoser.urls.authtoken')),
     path('bots/', include('bots.urls', namespace='bots')),
-
+    path('accounts/', include('accounts.urls', namespace='accounts')),
 ]
