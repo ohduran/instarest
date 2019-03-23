@@ -65,15 +65,15 @@ I can do with some help bringing this project forward! You can help out in very 
 
 # Principles
 
-* Software is information, and information must be free.
+* Software is __information__, and information must be free.
 
-* Software is writing, and every writing must tell a story that can be easily understood.
+* Software is __writing__, and every writing must tell a story that can be easily understood.
 
-* Software is a tool, and the value added from that tool comes from the people that use it, not from the tool itself.
+* Software is __a tool__, and the value added from that tool comes from the people that use it, not from the tool itself.
 
-* Software is mutable, but at any step, software must not need the help of a human to run.
+* Software is __mutable__, but at any step, software must not need the help of a human to run.
 
-* Software is a map of the world, and those who use them must understand that the map is never the territory.
+* Software is a __map of the world__, and those who use them must understand that the map is never the territory.
 
 
 # Why Open Source?
