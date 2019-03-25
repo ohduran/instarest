@@ -40,14 +40,16 @@ Promenade isn't a 'get rich quick scheme'. You can't buy engagement, [you can't 
 ## Where does this tool come from?
 I have been tinkering with Instagram and Twitter APIs for some time, but they limit the scope of the things you can do with them. Eventually, I listened to a podcast episode of [Talk Python to Me](https://talkpython.fm/episodes/show/142/automating-the-web-with-selenium-and-instapy) featuring the creator of [InstaPy](https://github.com/timgrossmann/InstaPy), and the wheels started turning. My experience with RESTful APIs did the rest. An unofficial version of the Instagram API was on the way.
 
-# Get started
+# Get started
 
 To be defined
 
-## Requirements
+## Requirements
+
 This software runs on Docker. Everything is pulled from the docker hub, but to work with it locally, docker must be installed. More info on how to set up locally is to be defined.
 
-# Contribute
+# Contribute
+
 Do you want to help? That's awesome. Here's a couple of things you can do:
 
 ## As a member of the community
