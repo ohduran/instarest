@@ -40,14 +40,16 @@ Promenade isn't a 'get rich quick scheme'. You can't buy engagement, [you can't 
 ## Where does this tool come from?
 I have been tinkering with Instagram and Twitter APIs for some time, but they limit the scope of the things you can do with them. Eventually, I listened to a podcast episode of [Talk Python to Me](https://talkpython.fm/episodes/show/142/automating-the-web-with-selenium-and-instapy) featuring the creator of [InstaPy](https://github.com/timgrossmann/InstaPy), and the wheels started turning. My experience with RESTful APIs did the rest. An unofficial version of the Instagram API was on the way.
 
-# Get started
+# Get started
 
 To be defined
 
-## Requirements
+## Requirements
+
 This software runs on Docker. Everything is pulled from the docker hub, but to work with it locally, docker must be installed. More info on how to set up locally is to be defined.
 
-# Contribute
+# Contribute
+
 Do you want to help? That's awesome. Here's a couple of things you can do:
 
 ## As a member of the community
@@ -62,6 +64,8 @@ I can do with some help bringing this project forward! You can help out in very 
 * Look for [issues labelled Help wanted](https://github.com/ohduran/Promenade/labels/help%20wanted) for issues that you can solve relatively easily.
 * Look for [issues labelled Good first issue](https://github.com/ohduran/Promenade/labels/good%20first%20issue) for issues that are for people who want to contribute, but try to work on a small feature first.
 * If you are an advanced developer, you can try to tackle [issues labelled enhancement](https://github.com/ohduran/Promenade/labels/enhancement). Beware though - they are harder to do and will require a lot of back and forth with the repository administrator in order to make sure we are going to the right direction with the product.
+
+You can trace the evolution of these and other things in the [Trello board](https://trello.com/b/3WOUAfDT/promenade)
 
 # Principles
 

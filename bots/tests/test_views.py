@@ -1,7 +1,9 @@
 import pytest
+from accounts.models import Account
 from bots.models import Bot
 from common.tests import PermalinkableTests, TimestampableTests
 from django.urls import reverse
+from model_mommy import mommy
 from rest_framework import status
 from users.models import User
 from users.tests import HasUserMixinTests
@@ -40,3 +42,17 @@ class TestBotViewSet(TimestampableTests, PermalinkableTests, IsVerifiableTests, 
 
         assert data['username'] == bot.username
         assert data['password'] == bot.password
+
+    def test_Post_GivenABotAndAnAccount_BotWillFollowAccount(self, default_user, client):
+        headers = 'Token {}'.format(default_user.auth_token.key)
+
+        bot = self.create_instance()
+        bot.assign_user(default_user.pk)
+        account = mommy.make(Account, pk=1)
+
+        data = {
+            'ids': [1],
+        }
+
+        response = client.post(reverse('bots:bot-follow', args=[bot.pk]), data=data, HTTP_AUTHORIZATION=headers)
+        assert status.HTTP_201_CREATED == response.status_code

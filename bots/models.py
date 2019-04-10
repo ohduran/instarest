@@ -22,6 +22,7 @@ class BotManager(models.Manager):
 
 class Bot(Timestampable, Verifiable, PasswordEncryptable, Permalinkable, HasUserMixin, models.Model):
     username = models.CharField(max_length=50, unique=True)
+    accounts = models.ManyToManyField('accounts.Account', related_name='bots')
 
     objects = BotManager()
 
